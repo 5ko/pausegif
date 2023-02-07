@@ -10,7 +10,7 @@
   and lack of warranty.
 */
 
-$RecipeInfo['PauseGIFs']['Version'] = '20230131';
+$RecipeInfo['PauseGIFs']['Version'] = '20230207';
 
 SDV($PauseGIFsExt, '.ani.gif');
 

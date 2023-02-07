@@ -9,9 +9,7 @@
   and lack of warranty.
 */
 
-var currentScript = document.currentScript;
-// console.log(currentScript);
-
+var pausegifScript = document.currentScript;
 document.addEventListener('DOMContentLoaded', function(){
   function toggleGif(e){
     e.preventDefault();
@@ -60,11 +58,9 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   
   function deanimateGifs() {
-    var ext = currentScript.dataset.ext;
+    var ext = pausegifScript.dataset.ext;
     
     var x = document.querySelectorAll('img[src$="'+ext+'"]');
-    
-    console.log({ext, imgs: x});
     
     for(var i=0; i<x.length; i++) {
       var img = x[i];
@@ -76,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function(){
       else img.addEventListener('load', loadGif);
     }
   }
-  console.log("will deanimateGifs");
   deanimateGifs();
 });
 
