@@ -10,14 +10,14 @@
   and lack of warranty.
 */
 
-$RecipeInfo['PauseGIFs']['Version'] = '20230207';
+$RecipeInfo['PauseGIFs']['Version'] = '20230212';
 
 SDV($PauseGIFsExt, '.ani.gif');
 
 SDV($UploadVerifyFunction, 'PauseGIFsUploadVerifyFunction');
 
 
-$ModuleHeaderFmt[] = array("pausegif/pausegif.js", 'data-ext' => $PauseGIFsExt);
+$ModuleHeaderFmt[] = array("$ModuleDirUrl/pausegif.js", 'data-ext' => $PauseGIFsExt);
 
 function PauseGIFsUploadVerifyFunction($pagename,$uploadfile,&$filepath,&$upname) {
   global $PauseGIFsExt, $DefaultUploadVerifyFunction;
